@@ -1,6 +1,9 @@
-> go test -bench .
+```shell
+$ go test -bench .
+```
 
 ````
-BenchmarkCopyByIndex-8           3596438               322.1 ns/op
-BenchmarkCopyUsingAppend-8       1000000              1113 ns/op
+BenchmarkCopyUsingAppendWithoutAlloc-8             39045             28258 ns/op          259314 B/op         16 allocs/op
+BenchmarkCopyUsingAppend-8                        141244              8473 ns/op           65537 B/op          1 allocs/op
+BenchmarkCopyByIndex-8                            145719              8166 ns/op           65537 B/op          1 allocs/op
 ````
